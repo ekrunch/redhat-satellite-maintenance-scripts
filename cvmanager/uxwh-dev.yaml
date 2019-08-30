@@ -1,0 +1,18 @@
+---
+:settings:
+  :user: admin
+  :pass: admin
+  :uri: https://satellite.internal.unixwarhammer.com
+  :timeout: 900
+  :org: 1
+  :lifecycle: 2
+  :keep: 2
+  :sequential: 5
+  :checkrepos: true
+  :promote_cvs: true
+:cv:
+  RHEL_8: latest
+:publish:
+  - RHEL_8
+:promote:
+  - RHEL_8

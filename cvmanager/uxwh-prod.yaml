@@ -1,0 +1,51 @@
+---
+:settings:
+  :user: admin
+  :pass: admin
+  :uri: https://satellite.internal.unixwarhammer.com
+  :timeout: 900
+  :org: 1
+  :lifecycle: 3
+  :keep: 2
+  :sequential: 5
+  :checkrepos: true
+:ccv:
+  RHEL_7_and_EPEL:
+    RHEL_7: latest
+    RHEL_7_6_Kickstart: latest
+    Satellite_6_4_Tools: latest
+    EPEL_7: latest
+  RHEL_7_-_Standard_Build:
+    RHEL_7: latest
+    RHEL_7_6_Kickstart: latest
+    Satellite_6_4_Tools: latest
+  RHEL_8_-_Standard_Build:
+    RHEL_8: latest
+    RHEL_8_Kickstart: latest
+    Satellite_6_4_Tools: latest
+  Gluster_Storage_Server_and_RHEL:
+    Gluster_Storage_Server: latest
+    RHEL_7: latest
+    RHEL_7_6_Kickstart: latest
+    Satellite_6_4_Tools: latest
+  OCP_3_11_with_Satellite_Tools_and_Storage_Client:
+    Gluster_Storage_Client: latest
+    OCP_3_11: latest
+    Satellite_6_4_Tools: latest
+    RHEL_7_6_Kickstart: latest
+:publish:
+  - EPEL_7
+  - Gluster_Storage_Client
+  - Gluster_Storage_Server
+  - OCP_3_11
+  - RHEL_7
+  - RHEL_7_6_Kickstart
+  - RHEL_8
+  - RHEL_8_Kickstart
+  - Satellite_6_4_Tools
+:promote:
+  - RHEL_7_and_EPEL
+  - RHEL_7_-_Standard_Build
+  - RHEL_8_-_Standard_Build
+  - Gluster_Storage_Server_and_RHEL
+  - OCP_3_11_with_Satellite_Tools_and_Storage_Client
